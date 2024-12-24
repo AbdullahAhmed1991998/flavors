@@ -4,10 +4,6 @@ library flavors;
 class Calculator {
   /// Returns [value] plus 1.
   int addOne(int value) => value + 1;
-}
-
-
-class FlavorConfig {
 
   int count = 0;
 
@@ -19,6 +15,12 @@ class FlavorConfig {
     count--;
   }
   static String flavor = 'dev';
+
+}
+
+
+class FlavorConfig {
+
 
 }
 
