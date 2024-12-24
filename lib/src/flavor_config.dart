@@ -1,13 +1,15 @@
 class FlavorConfig {
   int addOne(int value) => value + 1;
-  int count = 0;
+  int _count = 0;
 
-  void increment() {
-    count++;
+  int get count => _count;
+
+  int increment(int value) {
+    return _count++;
   }
 
-  void decrement() {
-    count--;
+  int decrement(int value) {
+    return _count--;
   }
 
 }
