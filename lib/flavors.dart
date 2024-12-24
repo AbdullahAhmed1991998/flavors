@@ -21,3 +21,13 @@ class FlavorConfig {
   static String flavor = 'dev';
 
 }
+
+
+class Counter {
+  int count = 0;
+
+
+  void increment() {
+    count++;
+  }
+}
