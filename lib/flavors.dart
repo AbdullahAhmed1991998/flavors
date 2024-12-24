@@ -5,6 +5,8 @@ class CountDownProgressIndicator extends StatefulWidget {
   /// Timer duration in seconds
   final int duration;
 
+   int count;
+
   /// Default Background color
   final Color backgroundColor;
 
@@ -44,7 +46,7 @@ class CountDownProgressIndicator extends StatefulWidget {
   final bool autostart;
 
   // ignore: public_member_api_docs
-  const CountDownProgressIndicator({
+   CountDownProgressIndicator({
     super.key,
     required this.duration,
     this.initialPosition = 0,
@@ -57,7 +59,7 @@ class CountDownProgressIndicator extends StatefulWidget {
     this.labelTextStyle,
     this.strokeWidth = 10,
     this.text,
-    this.autostart = true,
+    this.autostart = true, required this.count,
   })  : assert(duration > 0),
         assert(initialPosition < duration);
 
@@ -71,6 +73,16 @@ class _CountDownProgressIndicatorState extends State<CountDownProgressIndicator>
   late Animation<double> _animation;
   late AnimationController _animationController;
 
+  void increment() {
+    setState(() {
+      widget.count++;
+    });
+  }
+  void decrement() {
+    setState(() {
+      widget.count--;
+    });
+  }
   @override
   void dispose() {
     _animationController.dispose();
