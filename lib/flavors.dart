@@ -21,11 +21,20 @@ class Calculator {
 
 class FlavorConfig {
 
+  int count = 0;
+
+  void increment() {
+    count++;
+  }
+
+  void decrement() {
+    count--;
+  }
 
 }
 
 
-class Counter {
+class Counterrr {
   int count = 0;
 
 
