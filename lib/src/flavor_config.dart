@@ -1,15 +1,16 @@
 class FlavorConfig {
-  int addOne(int value) => value + 1;
-  int _count = 0;
+  int _count = 0; // المتغير الخاص بالعداد (خاص)
 
+  // Getter للحصول على القيمة الحالية للعداد
   int get count => _count;
 
-  int increment(int value) {
-    return _count++;
+  // دالة لزيادة العداد
+  void increment() {
+    _count++;
   }
 
-  int decrement(int value) {
-    return _count--;
+  // دالة لتقليل العداد
+  void decrement() {
+    _count--;
   }
-
 }
