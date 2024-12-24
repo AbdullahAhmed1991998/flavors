@@ -8,5 +8,16 @@ class Calculator {
 
 
 class FlavorConfig {
+
+  int count = 0;
+
+  void increment() {
+    count++;
+  }
+
+  void decrement() {
+    count--;
+  }
   static String flavor = 'dev';
+
 }
